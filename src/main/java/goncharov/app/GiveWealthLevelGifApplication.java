@@ -1,6 +1,6 @@
-package goncharov;
+package goncharov.app;
 
-import goncharov.config.IgnoreConfig;
+import goncharov.app.config.IgnoreConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;

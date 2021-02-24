@@ -1,0 +1,33 @@
+{
+  "properties": [
+    {
+      "name": "exchange.appId",
+      "type": "java.lang.String",
+      "description": "Description for Exchange.appId."
+    },
+    {
+      "name": "exchange.basedCurrency",
+      "type": "java.lang.String",
+      "description": "Description for exchange.basedCurrency."
+    },
+    {
+      "name": "exchange.url",
+      "type": "java.lang.String",
+      "description": "Description for exchange.Url."
+    },
+    {
+      "name": "giphy.appId",
+      "type": "java.lang.String",
+      "description": "Description for giphy.appId."
+    },
+    {
+      "name": "giphy.url",
+      "type": "java.lang.String",
+      "description": "Description for giphy.Url."
+    },
+    {
+      "name": "giphy.lang",
+      "type": "java.lang.String",
+      "description": "Description for giphy.lang."
+    }
+  ] }
