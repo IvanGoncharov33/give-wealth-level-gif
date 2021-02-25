@@ -1,10 +1,10 @@
-package goncharov.app;
+package ru.goncharov.app;
 
-import goncharov.app.service.ExchangeRateClientService;
-import goncharov.app.service.GifService;
-import goncharov.app.service.GiphyClientService;
-import goncharov.app.service.feignclient.FeignClientGif;
-import goncharov.app.service.impl.GifServiceImpl;
+import ru.goncharov.app.service.ExchangeRateClientService;
+import ru.goncharov.app.service.GifService;
+import ru.goncharov.app.service.GiphyClientService;
+import ru.goncharov.app.service.feignclient.FeignClientGif;
+import ru.goncharov.app.service.impl.GifServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,7 +26,7 @@ class GifServiceImplTest {
     @Mock
     private  GiphyClientService giphyClientService;
     @Mock
-    private  FeignClientGif feignClientGif;
+    private FeignClientGif feignClientGif;
     private byte[] expectedByte;
     private URI uri;
 

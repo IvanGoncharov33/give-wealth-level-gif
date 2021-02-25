@@ -1,15 +1,15 @@
-package goncharov.app;
+package ru.goncharov.app;
 
-import goncharov.app.dto.GiphyMetaDataDto;
-import goncharov.app.dto.Wealth;
-import goncharov.app.service.feignclient.GiphyFeignClient;
-import goncharov.app.service.impl.GiphyClientServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.goncharov.app.dto.GiphyMetaDataDto;
+import ru.goncharov.app.dto.Wealth;
+import ru.goncharov.app.service.feignclient.GiphyFeignClient;
+import ru.goncharov.app.service.impl.GiphyClientServiceImpl;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;

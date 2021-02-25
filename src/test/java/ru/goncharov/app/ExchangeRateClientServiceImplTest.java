@@ -1,10 +1,10 @@
-package goncharov.app;
+package ru.goncharov.app;
 
-import goncharov.app.dto.ExchangeRateDto;
-import goncharov.app.dto.Wealth;
-import goncharov.app.service.ExchangeRateClientService;
-import goncharov.app.service.feignclient.ExchangeRateFeignClient;
-import goncharov.app.service.impl.ExchangeRateClientServiceImpl;
+import ru.goncharov.app.dto.ExchangeRateDto;
+import ru.goncharov.app.dto.Wealth;
+import ru.goncharov.app.service.ExchangeRateClientService;
+import ru.goncharov.app.service.feignclient.ExchangeRateFeignClient;
+import ru.goncharov.app.service.impl.ExchangeRateClientServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
