@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/v1/gifs")
 public interface GiphyFeignClient {
 
-    @GetMapping("/search?api_key=${giphy.appId}&q=rich&limit=1&offset={random}&lang=${giphy.lang}")
+    @GetMapping("/search?q=rich&api_key=${giphy.appId}&limit=1&offset={random}&lang=${giphy.lang}")
     GiphyMetaDataDto getRandomGifRich(@PathVariable("random") String random);
 
-    @GetMapping("/search?api_key=${giphy.appId}&q=broke&limit=1&offset={random}&lang=${giphy.lang}")
+    @GetMapping("/search?q=broke&api_key=${giphy.appId}&limit=1&offset={random}&lang=${giphy.lang}")
     GiphyMetaDataDto getRandomGifBroke(@PathVariable("random") String random);
 }
