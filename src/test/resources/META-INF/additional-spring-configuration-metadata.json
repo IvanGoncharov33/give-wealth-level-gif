@@ -1,0 +1,43 @@
+{
+  "properties": [
+    {
+      "name": "exchange.appId",
+      "type": "java.lang.String",
+      "description": "Description for Exchange.appId."
+    },
+    {
+      "name": "exchange.basedCurrency",
+      "type": "java.lang.String",
+      "description": "Description for exchange.basedCurrency."
+    },
+    {
+      "name": "exchange.url",
+      "type": "java.lang.String",
+      "description": "Description for exchange.Url."
+    },
+    {
+      "name": "giphy.appId",
+      "type": "java.lang.String",
+      "description": "Description for giphy.appId."
+    },
+    {
+      "name": "giphy.url",
+      "type": "java.lang.String",
+      "description": "Description for giphy.url."
+    },
+    {
+      "name": "giphy.lang",
+      "type": "java.lang.String",
+      "description": "Description for giphy.lang."
+    },
+    {
+      "name": "test.url.wealthLevel.rich",
+      "type": "java.lang.String",
+      "description": "Description for test.url.wealthLevel.rich."
+    },
+    {
+      "name": "test.url.wealthLevel.broke",
+      "type": "java.lang.String",
+      "description": "Description for test.url.wealthLevel.broke."
+    }
+  ] }
