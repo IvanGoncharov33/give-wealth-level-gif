@@ -1,10 +1,10 @@
-package goncharov.app.service.impl;
+package ru.goncharov.app.service.impl;
 
-import goncharov.app.service.ExchangeRateClientService;
-import goncharov.app.dto.Wealth;
-import goncharov.app.service.feignclient.ExchangeRateFeignClient;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.goncharov.app.dto.Wealth;
+import ru.goncharov.app.service.ExchangeRateClientService;
+import ru.goncharov.app.service.feignclient.ExchangeRateFeignClient;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

@@ -1,4 +1,4 @@
-package goncharov.app.dto;
+package ru.goncharov.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

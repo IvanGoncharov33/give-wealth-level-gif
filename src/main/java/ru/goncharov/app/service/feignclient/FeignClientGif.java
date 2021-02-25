@@ -1,4 +1,4 @@
-package goncharov.app.service.feignclient;
+package ru.goncharov.app.service.feignclient;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

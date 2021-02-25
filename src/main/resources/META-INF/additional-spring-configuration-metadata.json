@@ -13,7 +13,7 @@
     {
       "name": "exchange.url",
       "type": "java.lang.String",
-      "description": "Description for exchange.Url."
+      "description": "Description for exchange.url."
     },
     {
       "name": "giphy.appId",
@@ -29,5 +29,20 @@
       "name": "giphy.lang",
       "type": "java.lang.String",
       "description": "Description for giphy.lang."
+    },
+    {
+      "name": "exchange.currencyCode",
+      "type": "java.lang.String",
+      "description": "Description for exchange.currencyCode."
+    },
+    {
+      "name": "exchange.latest.urn",
+      "type": "java.lang.String",
+      "description": "Description for exchange.latest.urn."
+    },
+    {
+      "name": "exchange.historical.urn",
+      "type": "java.lang.String",
+      "description": "Description for exchange.historical.urn."
     }
   ] }

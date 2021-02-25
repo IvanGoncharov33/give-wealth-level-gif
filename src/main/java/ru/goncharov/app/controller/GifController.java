@@ -1,6 +1,6 @@
-package goncharov.app.controller;
+package ru.goncharov.app.controller;
 
-import goncharov.app.service.GifService;
+import ru.goncharov.app.service.GifService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

@@ -1,4 +1,4 @@
-package goncharov.app.dto;
+package ru.goncharov.app.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -15,7 +15,6 @@ import java.util.Map;
 public class ExchangeRateDto {
 
     private String base;
-
     @JsonProperty("rates")
     private Map<String, Double> rates;
 }

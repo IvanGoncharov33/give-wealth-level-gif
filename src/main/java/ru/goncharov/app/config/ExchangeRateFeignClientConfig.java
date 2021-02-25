@@ -1,4 +1,4 @@
-package goncharov.app.config;
+package ru.goncharov.app.config;
 
 import feign.RequestInterceptor;
 import org.springframework.beans.factory.annotation.Value;

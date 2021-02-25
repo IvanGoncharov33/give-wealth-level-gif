@@ -1,11 +1,11 @@
-package goncharov.app.service.impl;
+package ru.goncharov.app.service.impl;
 
-import goncharov.app.service.ExchangeRateClientService;
-import goncharov.app.service.GiphyClientService;
-import goncharov.app.service.GifService;
-import goncharov.app.service.feignclient.FeignClientGif;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.goncharov.app.service.ExchangeRateClientService;
+import ru.goncharov.app.service.GifService;
+import ru.goncharov.app.service.GiphyClientService;
+import ru.goncharov.app.service.feignclient.FeignClientGif;
 
 import java.net.URI;
 

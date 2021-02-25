@@ -1,7 +1,7 @@
-package goncharov.app.service.feignclient;
+package ru.goncharov.app.service.feignclient;
 
-import goncharov.app.dto.ExchangeRateDto;
-import goncharov.app.config.ExchangeRateFeignClientConfig;
+import ru.goncharov.app.dto.ExchangeRateDto;
+import ru.goncharov.app.config.ExchangeRateFeignClientConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +15,4 @@ public interface ExchangeRateFeignClient {
     @GetMapping("/api/historical/{date}.json?base=${exchange.basedCurrency}&symbols={currencyCode}")
     ExchangeRateDto getYesterdayExchangeRate(@PathVariable String currencyCode,@PathVariable String date);
 
-    @GetMapping("api/currencies.json")
-    ExchangeRateDto getCurrencyCodes();
 }

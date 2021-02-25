@@ -1,9 +1,9 @@
-package goncharov.app.service.impl;
+package ru.goncharov.app.service.impl;
 
-import goncharov.app.service.GiphyClientService;
-import goncharov.app.service.feignclient.GiphyFeignClient;
-import goncharov.app.dto.Wealth;
-import goncharov.app.dto.GiphyMetaDataDto;
+import ru.goncharov.app.service.GiphyClientService;
+import ru.goncharov.app.service.feignclient.GiphyFeignClient;
+import ru.goncharov.app.dto.Wealth;
+import ru.goncharov.app.dto.GiphyMetaDataDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

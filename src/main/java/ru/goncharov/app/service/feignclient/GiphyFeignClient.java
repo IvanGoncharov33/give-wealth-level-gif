@@ -1,6 +1,6 @@
-package goncharov.app.service.feignclient;
+package ru.goncharov.app.service.feignclient;
 
-import goncharov.app.dto.GiphyMetaDataDto;
+import ru.goncharov.app.dto.GiphyMetaDataDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-package goncharov.app.controller;
+package ru.goncharov.app.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Throwable.class)
     protected ResponseEntity<?> handleAllExceptions(Throwable exception){
         String errorCode = generatedLogCode();
-
         log.error("Error code = [" + errorCode + " ] message:" + exception.getMessage());
         String errorMessage = "Error Code = [" + errorCode + "] message: внутреняя ошибка сервера, попробуйте позднее.";
         return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);

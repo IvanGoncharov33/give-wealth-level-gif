@@ -1,4 +1,4 @@
-package goncharov.app.config;
+package ru.goncharov.app.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
