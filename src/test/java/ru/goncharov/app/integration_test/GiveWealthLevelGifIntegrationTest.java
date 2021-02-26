@@ -1,4 +1,4 @@
-package ru.goncharov.app.integrationtest;
+package ru.goncharov.app.integration_test;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.jupiter.api.AfterEach;

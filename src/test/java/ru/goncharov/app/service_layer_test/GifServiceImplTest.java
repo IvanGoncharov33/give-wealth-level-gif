@@ -1,4 +1,4 @@
-package ru.goncharov.app;
+package ru.goncharov.app.service_layer_test;
 
 import ru.goncharov.app.service.ExchangeRateClientService;
 import ru.goncharov.app.service.GifService;

@@ -1,4 +1,4 @@
-package ru.goncharov.app;
+package ru.goncharov.app.service_layer_test;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
