@@ -7,6 +7,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
+/**
+ * Application runner
+ */
 @EnableFeignClients
 @SpringBootApplication
 @ComponentScan(excludeFilters =@ComponentScan.Filter(type = FilterType.ANNOTATION, classes = IgnoreConfig.class))

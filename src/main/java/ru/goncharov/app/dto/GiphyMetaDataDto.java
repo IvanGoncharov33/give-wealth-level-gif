@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * DTO for receiving a response from the giphy feign client
+ */
 @Getter
 @Setter
 @AllArgsConstructor

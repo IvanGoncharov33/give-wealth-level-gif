@@ -1,4 +1,4 @@
-package ru.goncharov.app.controller;
+package ru.goncharov.app.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.UUID;
 
+/**
+ * Global exception handler
+ */
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {

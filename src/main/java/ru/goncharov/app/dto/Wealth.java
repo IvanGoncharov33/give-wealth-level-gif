@@ -1,5 +1,18 @@
 package ru.goncharov.app.dto;
 
+/**
+ *  Wealth level
+ *  {@link #RICH}
+ *  {@link #BROKE}
+ */
 public enum Wealth {
-    BROKE, RICH
+    /**
+     * Low level of wealth
+     */
+    BROKE,
+
+    /**
+     * High level of wealth
+     */
+    RICH
 }

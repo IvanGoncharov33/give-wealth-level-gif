@@ -8,6 +8,9 @@ import lombok.Setter;
 
 import java.util.Map;
 
+/**
+ * DTO for receiving a response from the client
+ */
 @Getter
 @Setter
 @AllArgsConstructor

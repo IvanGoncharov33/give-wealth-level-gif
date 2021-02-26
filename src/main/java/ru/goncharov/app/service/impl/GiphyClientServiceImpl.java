@@ -10,12 +10,20 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+/**
+ * Service for getting source GIF
+ */
 @AllArgsConstructor
 @Service
 public class GiphyClientServiceImpl implements GiphyClientService {
 
     private final GiphyFeignClient giphyFeignClient;
 
+    /**
+     * Get source GIF depending on wealth level
+     * @param wealth wealth level
+     * @return source GIF URL in string format
+     */
     @Override
     public String getUrlWithWealthDifferenceGif(Wealth wealth){
         String urlGif;
