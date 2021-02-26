@@ -1,16 +1,16 @@
 package ru.goncharov.app;
 
-import ru.goncharov.app.dto.ExchangeRateDto;
-import ru.goncharov.app.dto.Wealth;
-import ru.goncharov.app.service.ExchangeRateClientService;
-import ru.goncharov.app.service.feignclient.ExchangeRateFeignClient;
-import ru.goncharov.app.service.impl.ExchangeRateClientServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.goncharov.app.dto.ExchangeRateDto;
+import ru.goncharov.app.dto.Wealth;
+import ru.goncharov.app.service.ExchangeRateClientService;
+import ru.goncharov.app.service.feignclient.ExchangeRateFeignClient;
+import ru.goncharov.app.service.impl.ExchangeRateClientServiceImpl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,26 +26,25 @@ class ExchangeRateClientServiceImplTest {
     private ExchangeRateFeignClient exchangeRateFeignClient;
     private ExchangeRateDto exchangeRateDtoWithTodayExchangeRate;
     private ExchangeRateDto getExchangeRateDtoWithYesterdayExchangeRate;
-    private String currencyCode;
+    private final String currencyCode = "EUR";
 
     @BeforeEach
     void setUp() {
         Map<String, Double> mapWithTodayExchangeRate = new HashMap<>();
         Map<String, Double> mapWithYesterdayExchangeRate = new HashMap<>();
-        currencyCode = "USD";
         sut = new ExchangeRateClientServiceImpl(exchangeRateFeignClient);
-        exchangeRateDtoWithTodayExchangeRate = new ExchangeRateDto("RUB", mapWithTodayExchangeRate);
-        getExchangeRateDtoWithYesterdayExchangeRate = new ExchangeRateDto("RUB", mapWithYesterdayExchangeRate);
-
+        final String baseCurrencyCode = "RUB";
+        exchangeRateDtoWithTodayExchangeRate = new ExchangeRateDto(baseCurrencyCode, mapWithTodayExchangeRate);
+        getExchangeRateDtoWithYesterdayExchangeRate = new ExchangeRateDto(baseCurrencyCode, mapWithYesterdayExchangeRate);
     }
 
     @Test
     void shouldGetRichWhenExchangeRateHigherToday() {
         exchangeRateDtoWithTodayExchangeRate.getRates().put(currencyCode, 10.0);
         getExchangeRateDtoWithYesterdayExchangeRate.getRates().put(currencyCode, 8.0);
-        when(exchangeRateFeignClient.getExchangeRateCurrent(any(String.class)))
+        when(exchangeRateFeignClient.getExchangeRateToday(any(String.class)))
                 .thenReturn(exchangeRateDtoWithTodayExchangeRate);
-        when(exchangeRateFeignClient.getYesterdayExchangeRate(any(String.class), any(String.class)))
+        when(exchangeRateFeignClient.getHistoricalExchangeRate(any(String.class), any(String.class)))
                 .thenReturn(getExchangeRateDtoWithYesterdayExchangeRate);
         Assertions.assertEquals(Wealth.RICH, sut.getWealthDifferenceExchangeRate(currencyCode));
     }
@@ -54,11 +53,10 @@ class ExchangeRateClientServiceImplTest {
     void shouldGetBrokeWhenExchangeRateHigherYesterday() {
         exchangeRateDtoWithTodayExchangeRate.getRates().put(currencyCode, 8.0);
         getExchangeRateDtoWithYesterdayExchangeRate.getRates().put(currencyCode, 10.0);
-        when(exchangeRateFeignClient.getExchangeRateCurrent(any(String.class)))
+        when(exchangeRateFeignClient.getExchangeRateToday(any(String.class)))
                 .thenReturn(exchangeRateDtoWithTodayExchangeRate);
-        when(exchangeRateFeignClient.getYesterdayExchangeRate(any(String.class), any(String.class)))
+        when(exchangeRateFeignClient.getHistoricalExchangeRate(any(String.class), any(String.class)))
                 .thenReturn(getExchangeRateDtoWithYesterdayExchangeRate);
         Assertions.assertEquals(Wealth.BROKE, sut.getWealthDifferenceExchangeRate(currencyCode));
     }
-
 }

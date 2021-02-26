@@ -39,5 +39,35 @@
       "name": "test.url.wealthLevel.broke",
       "type": "java.lang.String",
       "description": "Description for test.url.wealthLevel.broke."
+    },
+    {
+      "name": "giphy.service.test.url.rich",
+      "type": "java.lang.String",
+      "description": "Description for giphy.service.test.url.rich."
+    },
+    {
+      "name": "giphy.service.test.url.broke",
+      "type": "java.lang.String",
+      "description": "Description for giphy.service.test.url.broke."
+    },
+    {
+      "name": "gif.service.test.uri",
+      "type": "java.lang.String",
+      "description": "Description for gif.service.test.uri."
+    },
+    {
+      "name": "exchange.latest.urn",
+      "type": "java.lang.String",
+      "description": "Description for exchange.latest.urn."
+    },
+    {
+      "name": "exchange.historical.urn",
+      "type": "java.lang.String",
+      "description": "Description for exchange.historical.urn."
+    },
+    {
+      "name": "exchange.currencyCode",
+      "type": "java.lang.String",
+      "description": "Description for exchange.currencyCode."
     }
   ] }
