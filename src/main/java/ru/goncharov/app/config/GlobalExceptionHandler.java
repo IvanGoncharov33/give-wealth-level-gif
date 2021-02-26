@@ -15,15 +15,24 @@ import java.util.UUID;
 @Slf4j
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(Throwable.class)
-    protected ResponseEntity<?> handleAllExceptions(Throwable exception){
+    @ExceptionHandler(WrongCurrencyCodeException.class)
+    protected ResponseEntity<?> handleWrongCurrencyCodeException(WrongCurrencyCodeException exception) {
         String errorCode = generatedLogCode();
-        log.error("Error code = [" + errorCode + " ] message:" + exception.getMessage());
+        log.error("Error code = [ " + errorCode + " ] message:" + exception.getMessage());
+        String errorMessage;
+        errorMessage = "Error Code = [" + errorCode + "] message: " + exception.getMessage();
+        return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    protected ResponseEntity<?> handleAllExceptions(RuntimeException exception) {
+        String errorCode = generatedLogCode();
+        log.error("Error code = [ " + errorCode + " ] message:" + exception.getMessage());
         String errorMessage = "Error Code = [" + errorCode + "] message: внутреняя ошибка сервера, попробуйте позднее.";
         return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    private String generatedLogCode(){
+    private String generatedLogCode() {
         UUID uuid = UUID.randomUUID();
         return String.valueOf(uuid);
     }
