@@ -5,7 +5,7 @@
 
 1. Для начала работы должен быть установлен Docker Desktop, для установки следуйте инструкции с https://docs.docker.com
 
-2. Открыть командную консоль и скачать образ, выполнив команду `docker pull creed3033/give-wealth-level-gif:latest`
+2. Открыть командную консоль
 
 3. Cкачать образ, выполнив команду `docker pull creed3033/give-wealth-level-gif:latest`
 
